@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rhombus Area with Form</title>
+    <script>
+        function AreaRombo(form) {
+            let Dmayor = form.diMayor.value;
+            let Dmenor = form.diMenor.value;
+            let area = (Dmayor * Dmenor) / 2;
+            form.arearombo.value = area;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Diagonal Mayor: <input type="text" name="diMayor"><br>
+        Diagonal Menor: <input type="text" name="diMenor"><br>
+        Area del Rombo: <input type="text" name="arearombo"><br>
+        <input type="button" value="Calcular" onclick="AreaRombo(this.form)">
+        <input type="reset" value="Limpiar">
+    </form>
+</body>
+</html>
+

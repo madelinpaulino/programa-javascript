@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bill of Sale</title>
+    <script>
+        function facturar(form) {
+            form.sarroz.value = Number(form.arroz.value) * Number(form.carroz.value);
+            form.sfrijol.value = Number(form.frijol.value) * Number(form.cfrijol.value);
+            form.scafe.value = Number(form.cafe.value) * Number(form.ccafe.value);
+
+            let total = Number(form.sarroz.value) + Number(form.sfrijol.value) + Number(form.scafe.value);
+            form.total.value = total;
+
+            let iva = total * 0.16;
+            form.iva.value = iva.toFixed(2); // Keep 2 decimal places
+
+            let neto = total + iva;
+            form.neto.value = neto.toFixed(2); // Keep 2 decimal places
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <table border="1" bordercolor="darkblue" width="450">
+            <tr>
+                <td width="414" align="CENTER" colspan="4">
+                    <b>
+                        <font face="Arial" size="5">SUPERMERCADO EL MAYORISTA</font>
+                    </b>
+                </td>
+                <td width="414" align="right"
